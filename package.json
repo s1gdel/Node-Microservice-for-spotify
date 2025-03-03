@@ -3,5 +3,8 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "spotify-preview-finder": "^1.1.1"
+  },
+  "scripts": {
+    "start": "node node.js"
   }
 }
