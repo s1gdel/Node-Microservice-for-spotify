@@ -8,6 +8,11 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
+// Health check endpoint to prevent the server from sleeping
+app.get('/ping', (req, res) => {
+    res.json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
 app.get('/preview', async (req, res) => {
     const songName = req.query.song;
     if (!songName) {
